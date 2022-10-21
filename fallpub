@@ -33,10 +33,6 @@ if [ $tmp -gt $gr ] && [ $tmp -lt 1000 ]
 then
 tmp=$gr
 fi
-if [ $tmp -lt $cel ]
-then
-tmp=$cel
-fi
 
 xdotool windowmove "$id" x "$tmp"
 }
@@ -44,7 +40,6 @@ xdotool windowmove "$id" x "$tmp"
 setup $1
 bgr=932
 gr=$bgr
-cel=400
 old=$(gety)
 
 v=0
